@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Axios</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+		<!-- Axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row mt-2">
+				<div>
+					<h1>Belajar AXIOS</h1>
+				</div>
+				<div>
+					<button type="button" class="btn btn-sm btn-outline-dark" id="btn-get">GET</button>
+					<button type="button" class="btn btn-sm btn-outline-dark" id="btn-show">SHOW</button>
+					<button type="button" class="btn btn-sm btn-outline-dark" id="btn-post">POST</button>
+					<button type="button" class="btn btn-sm btn-outline-dark" id="btn-update">UPDATE</button>
+					<button type="button" class="btn btn-sm btn-outline-dark" id="btn-delete">DELETE</button>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<div id="content"></div>
+			</div>
+		</div>
+		
+		<script type="module">
+			/*
+			import {get, show, siswa} from './functions.js';
+
+			get();
+			show();
+			console.log(siswa);
+			*/
+
+			import {get} from './get.js';
+			import {show} from './show.js';
+			import {post} from './post.js';
+			import {update} from './update.js';
+			import {destroy} from './destroy.js';
+
+			document.querySelector('#btn-get').addEventListener('click', get);
+			document.querySelector('#btn-show').addEventListener('click', show);
+			document.querySelector('#btn-post').addEventListener('click', post);
+			document.querySelector('#btn-update').addEventListener('click', update);
+			document.querySelector('#btn-delete').addEventListener('click', destroy);
+
+		</script>
+	</body>
+</html>
